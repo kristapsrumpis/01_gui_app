@@ -8,7 +8,13 @@ const url = require('url')
 let win;
 
 function createWindow(){
-    win = new BrowserWindow();
+    win = new BrowserWindow({
+        webPreferences: {
+          nodeIntegration: true,
+          contextIsolation: false,
+        }
+    })
+
     win.loadURL(url.format(
         {
         pathname: path.join(__dirname, 'index.html'),
@@ -16,7 +22,9 @@ function createWindow(){
         slashes: true
         }
     ))
-
+    
+    //opens dev tools
+    win.webContents.openDevTools()
     win.on('closed', ()=>{
         win = null
     })
