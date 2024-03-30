@@ -1,16 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>Electron app</title>
+	<meta charset="UTF-8" />
+	<link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';">
+	<link rel="stylesheet" href="style.css" />
+	<title>Tic Tac Toe</title>
 </head>
 <body>
-    <h1>Ready and running</h1>
-
-    <script>
+	<div class="container">
+		<div class="header">
+			<h1>Tick Tack Toe</h1>
+			<input id="reset" type="button" value="reset"/>
+			<div id="playerTurn">player turn <span> x</span></div>
+		</div>
+		<div class="gameBoard">
+			<div class="block" id="block1"></div>
+			<div class="block" id="block2"></div>
+			<div class="block" id="block3"></div>
+			
+			<div class="block" id="block4"></div>
+			<div class="block" id="block5"></div>
+			<div class="block" id="block6"></div>
+			
+			<div class="block" id="block7"></div>
+			<div class="block" id="block8"></div>
+			<div class="block" id="block9"></div>
+		</div>
+		<div class="mesage"></div>
+	</div>
+	<script>
         require('./index.js')
     </script>
 </body>

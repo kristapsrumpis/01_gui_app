@@ -12,7 +12,10 @@ function createWindow(){
         webPreferences: {
           nodeIntegration: true,
           contextIsolation: false,
-        }
+        },
+        width: 800,
+        height: 600,
+        autoHideMenuBar: true
     })
 
     win.loadURL(url.format(
@@ -23,8 +26,6 @@ function createWindow(){
         }
     ))
     
-    //opens dev tools
-    // win.webContents.openDevTools()
     win.on('closed', ()=>{
         win = null
     })

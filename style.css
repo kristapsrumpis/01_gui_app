@@ -1,6 +1,143 @@
+:root{
+	--boder: 1px solid black;
+	--blLineHeight: 100px;
+	--blTextAlign: center;
+	--blFontSize: 100px;
+}
+*{
+	font-family: 'Permanent Marker';
+}
 body{
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
-    
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 300px;
+	min-height: 300px;
+	background-color: white;
+	margin: 20px auto;
+}
+.header{
+	text-align: center;
+}
+.header h1{
+	font-size: 30px;
+	margin: 0;
+	padding: 10px;
+}
+#reset{
+	margin-bottom: 30px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.gameBoard{
+	height: 300px;
+	width: 300px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+	"b1 b2 b3"
+	"b4 b5 b6"
+	"b7 b8 b9";
+}
+#block1{
+	grid-area: b1;
+	border-right: var(--boder);
+	border-bottom: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block2{
+	grid-area: b2;
+	border-left: var(--boder);
+	border-right: var(--boder);
+	border-bottom: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block3{
+	grid-area: b3;
+	border-left: var(--boder);
+	border-bottom: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block4{
+	grid-area: b4;
+	border-top: var(--boder);
+	border-right: var(--boder);
+	border-bottom: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block5{
+	grid-area: b5;
+	border: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block6{
+	grid-area: b6;
+	border-top: var(--boder);
+	border-left: var(--boder);
+	border-bottom: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block7{
+	grid-area: b7;
+	border-top: var(--boder);
+	border-right: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block8{
+	grid-area: b8;
+	border-left: var(--boder);
+	border-top: var(--boder);
+	border-right: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#block9{
+	grid-area: b9;
+	border-top: var(--boder);
+	border-left: var(--boder);
+	box-sizing: border-box;
+	line-height: var(--blLineHeight);
+	text-align: var(--blTextAlign);
+	font-size: var(--blFontSize);
+}
+#playerTurn{
+	margin-bottom: 20px;
+}
+#playerTurn span{
+	font-size: 30px;
+	color: green;
+}
+.mesage{
+	margin-top: 20px;
+	text-align: center;
+}
+.mesage span{
+	font-size: 30px;
+	color: green;
 }
