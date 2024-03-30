@@ -1,7 +1,7 @@
 {
   "name": "01_gui_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tic-Tac-Toe",
   "main": "app.js",
   "scripts": {
     "start": "electron ."
